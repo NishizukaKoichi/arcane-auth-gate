@@ -53,3 +53,14 @@ arcane-auth-gate/
 - [ ] Basic web server for user registration
 - [ ] Access revocation logic
 - [ ] Codex automation & test scripts
+
+## Node.js server
+
+A minimal Express server is provided in `src/index.ts` to handle Patreon OAuth callbacks.
+Install dependencies with `pnpm install` and run the dev server:
+
+```bash
+pnpm dev
+```
+
+The server uses a SQLite database via Prisma. Configure credentials in `.env` as shown in `.env.example`.
