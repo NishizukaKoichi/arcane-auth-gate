@@ -1,0 +1,14 @@
+{
+  "name": "arcane-auth-gate",
+  "version": "1.0.0",
+  "description": "Arcane Auth Gate is a secure, modular authentication system that enables access to digital products or content *only* for verified Patreon paying members, using Patreon’s API and email matching.   Designed for creators and indie devs who wish to offer truly exclusive “magic-linked” access to supporters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
