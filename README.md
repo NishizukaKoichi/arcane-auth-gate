@@ -41,8 +41,26 @@ arcane-auth-gate/
 3. **Set up your `.env` file:**  
    See `.env.example` for all required keys (Patreon client ID/secret etc)
 4. **Run the first test script:**  
-   `python app/patreon_client.py`  
+   `python app/patreon_client.py`
    (Should fetch and print a list of paying members if credentials are correct)
+
+## Running the OAuth demo
+
+The included Flask server starts the Patreon OAuth flow at `/auth/patreon` and
+handles the callback at `/api/callback`.
+
+1. Ensure your `.env` contains valid values for `PATREON_CLIENT_ID`,
+   `PATREON_CLIENT_SECRET`, `PATREON_REDIRECT_URI`, `PATREON_CAMPAIGN_ID` and
+   `PATREON_ACCESS_TOKEN`.
+2. Start the server with `python -m app.server` (or `python app/server.py`).
+3. Open `http://localhost:5000/auth/patreon` in your browser and follow the
+   Patreon login prompts.
+4. After authorizing the app you will be redirected to `/api/callback` where the
+   server exchanges the code for access tokens.
+
+**Note:** The sandbox environment used for automated testing cannot reach
+Patreon’s API, so the callback request will fail here. Run the demo on a local
+machine with internet connectivity to complete the OAuth flow successfully.
 
 ## Roadmap
 
